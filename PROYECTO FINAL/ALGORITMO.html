@@ -1,0 +1,259 @@
+<html>
+  <head>
+    <!---  ELEMENTOS DE BOOTSTRAP  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="ext/bootstrap/css/bootstrap.css"> 
+    <link rel="stylesheet" href="css/keyframes.css"> 
+    <link rel="stylesheet" href="css/banner.css"> 
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/tabla_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <script src="js/animacion_final.js"></script>
+    <title> Algoritmo de Greedy</title>
+    </head>
+  <body style="background-color:#97CADB;">
+    <!---  ELEMENTOS DE BOOTSTRAP  -->
+    <header> 
+      <!--BARRA DE NAVEGACION-->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top " style="background-color:  #018ABE", id="barranavegacion">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="ALGORITMO.html">Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+              <li class="nav-item" >
+                <a class="nav-link"href="#Explicacion">Informacion</a> 
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#Desmotracion">Analisis</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#Implementacion" onclick="">Implementacion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#Animacion">Animacion</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--SECCION DEL BANNER-->
+    <section > 
+      <div class="ewk_cont_banner"> 
+          <div class="ewk_sombra">
+            <h1 >Seleccion de actividades-Greedy</h1>
+            <p>Equipo: Universal</p>
+            <p style="font-size: 20px;"> Salmerón Contreras María José <br>  Sánchez Sánchez Luis Gerardo</p>
+            <hr/>
+              <div class="ewk_cont_banner_link">
+                <a class="ewk_cont_banner_link_1" href="#Explicacion">Informacion</a>
+                <a  class="ewk_cont_banner_link_2" href="#Desmotracion">Analisis</a>
+                <a   class="ewk_cont_banner_link_3" href="#Implementacion">Implementacion</a>
+                <a   class="ewk_cont_banner_link_4"  href="#Animacion">Animacion</a>
+                
+              </div>
+          </div>  
+      </div>
+    </section>
+
+    <!--INFORMACION DEL ALGORITMO-->
+    <section id="Explicacion" style="background-color:  #97CADB;">
+      <div class="container" style="padding-top: 40px;">
+        <div class="container jumbotron" >
+        <div class="row">
+         <div class="col-md-12" >
+          <h1  style="text-align: center;" > <b>Hablando de Algortimos</b></h1>
+         </div>
+          <div class="col-md-6">
+            <h2><b>¿Qué son los algortimos Voraces o de Greedy?</b></h2>
+            <p style="text-align: justify;">Dado un conjunto finito de entradas C, 
+              un algoritmo voraz devuelve un conjunto S (seleccionados) tal que y que además cumple con las restricciones del problema inicial. 
+              Cada conjunto S que satisfaga las restricciones se le suele denominar prometedor, y si éste además logra que la función objetivo 
+              se minimice o maximice (según corresponda) diremos que S es una solución óptima. </p>
+          </div>
+          <div class="col-md-6">
+            <h2> <b> De que consta "Selección de actividades" </b> </h2>
+            <ol style="text-align: justify;">
+              <li> Es un problema de planificación de tareas (en inglés, scheduling).</li>
+              <li> Se tiene un conjunto S={1,2,…,n} de
+                actividades (por ej., clases) que deben
+                usar un recurso (por ej., un aula) que
+                sólo puede ser usado por una actividad
+                en cada instante.</li>
+              <li>Cada actividad <i>i</i> tiene asociado un
+                instante de comienzo <i>c<sub>i</sub> </i> y un instante de
+                finalización <i> f<sub>i</sub></i>, tales que <i>c<sub>i</sub><=f<sub>i</sub> </i>
+                , de forma  que la actividad <i>i</i>, si se realiza, debe
+                hacerse durante [<i> c<sub>i</sub>,f<sub>i</sub> </i>). </li>
+              <li>El problema de selección de actividades
+                consiste en seleccionar un conjunto de
+                actividades mutuamente compatibles
+                que tenga cardinal máximo.</li>
+            </ol> 
+          </div>
+        </div>
+        <h4>Video acerca del algoritmo.</h4>
+        <iframe width="100%" height="50%" src="https://www.youtube.com/embed/HzeK7g8cD0Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Para mas información, puedes visitar las siguientes paginas 
+          <ol>
+            <li><a href="https://www.geeksforgeeks.org/activity-selection-problem-greedy-algo-1/">Pagina GeeksForGeeks</a></li>
+            <li><a href="https://cimat.mx/~amor/Omi/Entrenamiento/EntrenamientoEgipto2008/Entrenamiento1/materialDia1/selAct.html">Pagina CIMA</a></li>
+          </ol></p>
+        </div>
+      </div>
+    </section>
+    <!--CAMPO DE LA DEMOSTRACION Y GRAFICA-->
+    <section id="Desmotracion"  class="fondo_mate">
+      <div class="container "  style="color:whitesmoke; padding-bottom: 20px; padding-top: 20px;">
+        <div class="row sombra_texto_mate espacio" style="padding-bottom: 20px;">
+          <div class="col-sm-12">
+            <h1 style="text-align: center;">Análisis del Algoritmo</h1>
+          </div>
+          <div class="col-6">
+            <h1> Análisis Temporal</h1>
+            <img src="img/analisisBubble.PNG" class="img-fluid" >
+            <img src="img/analisisSelect.PNG" class="img-fluid" >
+          </div>
+          <div class="col-6">
+            <h1>Análisis Espacial</h1>
+            <img src="img/espacialBubble.PNG" class="img-fluid">
+            <img src="img/espacialSelect.PNG" class="img-fluid">
+          </div>
+          <div class="col-sm-12" style="text-align: center;">
+            <h1>Costo del algoritmo.</h1>
+            <img src="img/grafica.PNG" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--CODIGOS IMPLEMENTADOS-->
+    <section id="Implementacion" style="background-color:  #97CADB;">
+      <div class="container" >
+        <h2 style="padding-top: 60px;"> <b>Implementación</b></h2>
+        <p style="text-align: center;">A continuación te presentamos algunos códigos en sus respectivos lenguajes.</p>
+        <ul class="nav nav-pills" style="background-color: white; border-color: black;" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="C-tab" data-bs-toggle="tab" href="#C" role="tab" aria-controls="C" aria-selected="true">C/C++</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="JAVA-tab" data-bs-toggle="tab" href="#JAVA" role="tab" aria-controls="JAVA" aria-selected="false">JAVA</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="PY-tab" data-bs-toggle="tab" href="#PY" role="tab" aria-controls="PY" aria-selected="false">Python 3</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent" style="background-color: white; border-color: black; " >
+          <div class="tab-pane fade show active" id="C" role="tabpanel" aria-labelledby="C-tab">
+            <pre class="prettyprint" style="border-color: white !important;">
+void printMaxActivities(int s[], int f[], int n) 
+{ 
+    int i, j; 
+    printf ("Following activities are selected n"); 
+    i = 0; 
+    printf("%d ", i);  
+    for (j = 1; j < n; j++) 
+    { 
+      if (s[j] >= f[i]) 
+      { 
+          printf ("%d ", j); 
+          i = j; 
+      } 
+    } 
+}
+            </pre>
+          </div>
+          <div class="tab-pane fade" id="JAVA" role="tabpanel" aria-labelledby="JAVA-tab">
+            <pre class="prettyprint" style="border-color: white !important;">
+public static void printMaxActivities(int s[], int f[], int n) 
+{ 
+int i, j; 
+System.out.print("Following activities are selected : n"); 
+i = 0; 
+System.out.print(i+" "); 
+for (j = 1; j < n; j++) 
+{ 
+      if (s[j] >= f[i]) 
+      { 
+          System.out.print(j+" "); 
+          i = j; 
+      } 
+  } 
+}
+            </pre>
+          </div>
+          <div class="tab-pane fade" id="PY" role="tabpanel" aria-labelledby="PY-tab"><pre class="prettyprint" style="border-color: white !important;">
+def printMaxActivities(s , f ): 
+  n = len(f) 
+  print "The following activities are selected"
+  i = 0
+  print i, 
+  for j in xrange(n): 
+    if s[j] >= f[i]: 
+      print j, 
+      i = j 
+          </pre></div>
+        </div>
+      </div>
+    </section>
+    <section id="Animacion" class="fondo_animacion" style="text-align: center;">
+      <div class="container" style="padding-top: 40px;">
+        <div class="row">
+          <div class="col-md-12 jumbotron">
+          <h2 style="text-align: justify !important;">Divierte con la animacion </h2>
+          <p class="lead" style="text-align: justify;"> Sigue las instrucciones: </a></p>
+          <p class="lead" style="text-align: justify;"> 1. Con el Boton <b>"Agregar"</b> ingresa la cantidad de actividades que quieras. </a></p>
+          <p class="lead" style="text-align: justify;"> 2. En los espacios en blanco, ingresa el inicio y fin de cada actividad.</a></p>
+          <p class="lead" style="text-align: justify;"> 3. Si ya terminaste de editar, presiona el boton <b>"Finalizar"</b> y mira la animación. </a></p>
+          <p class="lead" style="text-align: justify;"> 4. Si quieres borrar una actividad, da <b>doble click</b> sobre ella, y presiona el botón <b>Eliminar</b></a></p>
+          <p class="lead" style="text-align: justify;"> 5. Si deseas realizar otra animación, da click en el botón <b>Reiniciar</b></a></p>
+          <a href="ext/manual.pdf" target="_blank" style="text-align: center;"> Manual en pdf </a>
+          <p class="lead" style="text-align: right;; font-size: smaller;"> Utilizando la tecnología de JavaScript y la biblioteca pública de <a href="https://p5js.org/es/"> P5.js </a></p>
+          <hr/>
+          <button id="bt_add" class="btn btn-outline-primary">Agregar</button>
+          <button id="bt_del" class="btn  btn-outline-danger">Eliminar</button>
+          <button id="finalizar" class="btn btn-outline-success" onclick="Capturar_inicio(); Capturar_fin();">Finalizar</button>
+          <button id="bt_reset" class="btn  btn-outline-info" onclick="reiniciar();">Reiniciar</button>
+          <table id="tabla_actividades" class="table table-bordered table-primary table-hover" contenteditable="true">
+            <thead>
+                <tr contenteditable="false" >
+                    <th scope="col">#Actividad</th>
+                    <th scope="col">Inicio</th>
+                    <th scope="col">Fin</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+          <p id="animacionaqui" style="text-align: center;"> 
+            <!--<button id="resetButton" class="reset_button">reset</button>-->
+          </div>
+          </p>  
+        </div>
+      </div>
+
+    </section>
+    <script src="ext/bootstrap/js/jquery.js" ></script>
+    <script src="ext/bootstrap/js/bootstrap.min.js"></script>
+    <script src = "http://code.jquery.com/jquery-latest.js" ></script>
+    <script src="js/index.js"></script>
+    <script>
+      //$('.navbar-nav>li>a').on('click', function(){
+      //$('.navbar-collapse').collapse('hide');})
+      $('#myTab').on('click', function(){
+      $('.navbar-collapse').collapse('hide');})
+      //$(document).on('click', function(){
+      //$('.navbar-collapse').collapse('hide');})
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    </body>
+</html>

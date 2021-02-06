@@ -1,0 +1,94 @@
+.ewk_cont_banner{
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/codigo_3.jpg");
+}
+
+.ewk_sombra
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.274);
+    color: white;
+    margin: auto;
+}
+.ewk_sombra hr{
+    border-top: 5px solid white;
+}
+
+.ewk_sombra h1{
+    font-size: 3.70vw;
+    margin-bottom: 10px;
+}
+
+.ewk_sombra p{
+    font-size: 3.14vw;
+    margin-bottom: 10px;
+}
+
+.ewk_cont_banner_link 
+{
+    margin: 15px;
+    position:relative;
+}
+
+.ewk_cont_banner_link a{
+    display:inline-block;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 1px;
+    margin-bottom: 5px;
+    width:200px;
+}
+
+.ewk_cont_banner_link a:hover{
+    background-color: #018ABE;
+    color: white;
+}
+
+.ewk_cont_banner_link_1
+{
+    opacity: 0;
+    animation: animacion_inicial_banner 1s;
+    -webkit-animation: animacion_inicial_banner 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+.ewk_cont_banner_link_2
+{
+    opacity: 0;
+    animation: animacion_inicial_banner 1s;
+    -webkit-animation: animacion_inicial_banner 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.ewk_cont_banner_link_3
+{
+    opacity: 0;
+    animation: animacion_inicial_banner 1s;
+    -webkit-animation: animacion_inicial_banner 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+.ewk_cont_banner_link_4
+{
+    opacity: 0;
+    animation: animacion_inicial_banner 1s;
+    -webkit-animation: animacion_inicial_banner 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
